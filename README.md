@@ -34,5 +34,3 @@ BioLink provides authenticated users with a searchable, organized interface to b
 
 ---
 
-## 🗂Project Structure
-
