@@ -1,0 +1,27 @@
+@media only screen and (min-width: 769px) {
+    .mobile-header {
+        display: none !important;
+    }
+}
+
+.container {
+    grid-gap: 4px;
+    padding: 4px;
+}
+.container p{
+    align-self: center;
+}
+
+.container Box {
+    cursor: pointer;
+    height: 30%;
+}
+
+.home-container {
+    height: 80vh;
+}
+
+.home-container p {
+    font-size: max(4vh, 3vw);
+    font-weight: bold;
+}

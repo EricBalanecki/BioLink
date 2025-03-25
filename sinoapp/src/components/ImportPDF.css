@@ -1,0 +1,78 @@
+/* Center the form */
+.import-pdf-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.import-pdf-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Dropdowns and inputs */
+.import-pdf-form .MuiFormControl-root {
+    margin-bottom: 16px;
+}
+
+/* Drag & Drop File Upload */
+.import-pdf-dropzone {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 6px;
+    background: #ffffff;
+    transition: background 0.2s ease-in-out;
+}
+
+.import-pdf-dropzone:hover {
+    background: #e8f0fe;
+}
+
+/* Upload Icon */
+.import-pdf-icon {
+    font-size: 40px !important;
+    color: #007bff;
+}
+
+/* File name text */
+.import-pdf-filename {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Submit Button */
+.import-pdf-button {
+    margin-top: 20px !important;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: none;
+    background: #007bff;
+    color: white;
+}
+
+.import-pdf-button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .import-pdf-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .import-pdf-title {
+        font-size: 20px;
+    }
+}

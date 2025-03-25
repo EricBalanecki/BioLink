@@ -1,0 +1,7 @@
+nav h3 a {
+    text-decoration: none;  /* Removes underline */
+}
+
+nav h3 a:hover {
+    text-decoration: underline;  /* Optional: underline on hover */
+}

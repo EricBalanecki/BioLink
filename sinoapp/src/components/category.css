@@ -1,0 +1,123 @@
+/* Overall container styling */
+.path-container {
+    margin: 0 auto;
+    max-width: 800px;
+    /* padding: 10px; */
+}
+.category-container {
+    grid-gap: 4px;
+    padding: 0 20px 20px 20px; /* Omit top padding */
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+/* Navigation styling */
+.category-nav {
+    margin-bottom: 20px;
+}
+
+.category-nav h3 a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.category-nav h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Title */
+.category-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.subcategory-card {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .subcategory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #208871;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .subcategory-title {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .brochure-list {
+    padding: 10px;
+  }
+
+/* List container */
+.list-container {
+    background-color: #fff;
+    max-width: 700px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* List item styling */
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    background-color: #f0f8ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight selected item */
+.list-item.selected {
+    background-color: #e0f7fa;
+    border-color: #007bff;
+}
+
+/* Checkbox styling */
+.checkbox {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+/* List name styling */
+.list-name {
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.list-name:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* No items message */
+.no-items {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+}
+
+

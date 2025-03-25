@@ -1,0 +1,11 @@
+.PdfDiv{ 
+    justify-items: center;
+    display: grid;
+    padding-top: 16px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.page-containger{
+    text-align: center;
+}
+

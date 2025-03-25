@@ -1,0 +1,42 @@
+.category-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.category-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    border: 5px solid #208871;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: white; /* Optional: Adjust background color */
+}
+
+.category-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.category-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #208871;
+}
+
+.category-image img {
+    width: 100%; /* Fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 120px; /* Limit max height for consistency */
+    border-radius: 5px; /* Optional: Adjust image corners */
+    object-fit: contain; /* Ensures the image fits without distortion */
+}
