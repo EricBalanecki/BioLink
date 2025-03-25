@@ -47,8 +47,8 @@ BioLink is a **full-stack web app** built using:
 ##  UI Previews
 
 <p align="center">
-  <img src="./client/public/screenshots/Screenshot1" alt="Home Page" width="45%" />
-  <img src="./client/public/screenshots/Screenshot2" alt="PDF Viewer" width="45%" />
+  <img src="client/public/screenshots/Screenshot1.png" alt="Home Page" width="45%" />
+  <img src="client/public/screenshots/Screenshot2.png" alt="PDF Viewer" width="45%" />
 </p>
 
 ---
