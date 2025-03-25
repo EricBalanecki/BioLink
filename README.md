@@ -5,8 +5,8 @@
 🔗 **Live Site:** [info.sinobiologicalus.com](https://info.sinobiologicalus.com)
 
 <p align="center">
-  <img src="./frontend/public/screenshots/home.png" alt="Home Page" width="45%" />
-  <img src="./frontend/public/screenshots/pdf-viewer.png" alt="PDF Viewer" width="45%" />
+  <img src="./client/public/screenshots/Screenshot1.png" alt="Home Page" width="45%" />
+  <img src="./client/public/screenshots/Screenshot2.png" alt="PDF Viewer" width="45%" />
 </p>
 
 ---
