@@ -1,41 +1,56 @@
 # BioLink
 
-**BioLink** is a secure, internal web application built for the **sales team at Sino Biological US** to easily access, preview, and share brochures with clients. Acting as a centralized digital catalog, BioLink streamlines the way sales representatives find and present brochures during customer interactions.
+**BioLink** is a secure, internal web application built for the **sales team at Sino Biological US** to easily browse, preview, and share marketing brochures. It serves as a centralized hub for all product brochures, with secure login, fast search, and in-browser PDF viewing.
 
 🔗 **Live Site:** [info.sinobiologicalus.com](https://info.sinobiologicalus.com)
-
-<p align="center">
-  <img src="./client/public/screenshots/Screenshot1.png" alt="Home Page" width="45%" />
-  <img src="./client/public/screenshots/Screenshot2.png" alt="PDF Viewer" width="45%" />
-</p>
 
 ---
 
 ## Overview
 
-BioLink provides authenticated users with a searchable, organized interface to browse company brochures and view them directly in the browser. The app is full-stack, using **React** for the frontend and **Node.js/Express** with **MongoDB** for the backend.
+The application helps sales reps access the latest brochures, filter them by tags or categories, and instantly view or share them—all through a clean, responsive interface.
+
+BioLink is a **full-stack web app** built using:
+- **React** for the frontend
+- **Node.js + Express** for the backend API
+- **MySQL** as the database, managed through **phpMyAdmin**
+- **JWT-based user authentication**
+- **React-PDF** for inline brochure previewing
 
 ---
 
 ## Key Features
 
-- **User Authentication**  
-  Secure login system using JSON Web Tokens (JWT) and bcrypt for password encryption.
+-  **User Authentication**  
+  Login system secured with JWT and bcrypt
 
-- **Brochure Catalog**  
-  Organized listing of brochures, filterable by tags, categories, or keywords.
+-  **Brochure Catalog**  
+  Organized, searchable list of brochures by tag/category
 
-- **PDF Rendering with React**  
-  View brochures in-browser using seamless PDF rendering via [React-PDF](https://github.com/wojtekmaj/react-pdf).
+-  **PDF Rendering**  
+  View brochures directly in the browser using `react-pdf`
 
-- **Search & Filter**  
-  Quickly locate brochures using live keyword search or tag-based filtering.
+-  **MySQL Database**  
+  Structured data storage and queries powered by MySQL
 
-- **Link Sharing**  
-  Easily copy and share brochure URLs with customers or colleagues.
+-  **phpMyAdmin Integration**  
+  Web-based MySQL administration for managing brochure data
 
-- **Role-Based Admin Tools** *(Planned)*  
-  Upload or manage brochures via admin-only access controls.
+-  **Live Search & Filters**  
+  Quickly find brochures based on keywords and metadata
+
+-  **Sharable Links**  
+  Copy direct brochure links to send to clients
 
 ---
+
+##  UI Previews
+
+<p align="center">
+  <img src="./client/public/screenshots/Screenshot1" alt="Home Page" width="45%" />
+  <img src="./client/public/screenshots/Screenshot2" alt="PDF Viewer" width="45%" />
+</p>
+
+---
+
 
