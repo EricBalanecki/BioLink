@@ -4,6 +4,11 @@
 
 🔗 **Live Site:** [info.sinobiologicalus.com](https://info.sinobiologicalus.com)
 
+<p align="center">
+  <img src="./frontend/public/screenshots/home.png" alt="Home Page" width="45%" />
+  <img src="./frontend/public/screenshots/pdf-viewer.png" alt="PDF Viewer" width="45%" />
+</p>
+
 ---
 
 ## Overview
