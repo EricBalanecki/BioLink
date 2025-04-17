@@ -13,6 +13,7 @@ import { AuthContext } from "../context/AuthContext";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
+// Page to control pdf display functions and navigation
 const PDF = React.memo(({ category, subcategory, name }) => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1); // Setting 1 to show the first page
@@ -50,6 +51,7 @@ const PDF = React.memo(({ category, subcategory, name }) => {
         setShowShare(!showShare);
     };
 
+    // api call to backend to download a copy of the pdf
     const handleDownload = async () => {
         const fullName = `${name}.pdf`;
         const downloadUrl = `/download/pdf?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}&brochureName=${encodeURIComponent(fullName)}`;
@@ -104,6 +106,8 @@ const PDF = React.memo(({ category, subcategory, name }) => {
                         <ArrowForward/>
                     </Button>
                     <Button onClick={handleDownload}>Download</Button>
+                    
+                    {/* Only displays share button if user is logged in */}
                     { user && (
                         <Button onClick={() => setShowShareModal(true)}>Share</Button>
                     )}

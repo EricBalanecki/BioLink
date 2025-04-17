@@ -25,6 +25,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MenuPNG from "../assets/images/LogoGlobe.png";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { categories } from "../constants/CategoryConstants"
+
 
 
 const theme = createTheme({
@@ -81,24 +83,24 @@ export default function Header() {
 
   const navigate = useNavigate();
 
-  const categories = {
-    "Infectious Disease Research": ["Influenza", "RSV", "Mpox", "Viral Research Comprehensive Solutions", "SARS-CoV-2"],
-    "CRO Services": ["Protein Production and Development", "Service Highlights", "Compound Screening and Profiling", "Enzyme and Assay Development", "Antibody Production and Development"],
-    "Emerging Therapeutic Targets": ["Oncology Research", "Immune Checkpoints", "Drug Target Research Solutions", "Featured Targets", "Biomarkers"],
-    "Cell Therapy": ["CAR-NK", "CAR-T", "GMP-grade", "Featured Targets"],
-    "Stem Cell Research": ["Biomarkers", "Stem Cell Research Solutions", "Organoid Research", "iPSC"],
-    "Antibodies": ["IHC", "Tag Antibodies", "Antibodies Comprehensive Solutions", "FACS", "Featured Antibodies"],
-    "Neurodegenerative Diseases Research": ["Neural Research Targets", "Neural Research Solutions", "Neurotrophins and Receptors"],
-    "Cytokines and Growth Factors": ["Cytokine Comprehensive Solutions", "Organoid Research", "GMP-grade", "Featured Cytokines"],
-    "Signaling Research": ["Ubiquitin", "Product Highlights", "Enzymes", "Kinases"],
-    "Immune Checkpoints": ["Featured Targets"],
-    "ADC therapy": ["ADC Comprehensive Solutions"],
-    "Lab Consumables": ["N.A."],
-    "Miscellaneous": ["N.A."],
-    "eBooks and Whitepapers": ["N.A."],
-    "Sino New Product Release": ["2024", "2023"],
-    "SCB New Product Release": ["2024"],
-  };
+  // const categories = {
+  //   "Infectious Disease Research": ["Influenza", "RSV", "Mpox", "Viral Research Comprehensive Solutions", "SARS-CoV-2"],
+  //   "CRO Services": ["Protein Production and Development", "Service Highlights", "Compound Screening and Profiling", "Enzyme and Assay Development", "Antibody Production and Development"],
+  //   "Emerging Therapeutic Targets": ["Oncology Research", "Immune Checkpoints", "Drug Target Research Solutions", "Featured Targets", "Biomarkers"],
+  //   "Cell Therapy": ["CAR-NK", "CAR-T", "GMP-grade", "Featured Targets"],
+  //   "Stem Cell Research": ["Biomarkers", "Stem Cell Research Solutions", "Organoid Research", "iPSC"],
+  //   "Antibodies": ["IHC", "Tag Antibodies", "Antibodies Comprehensive Solutions", "FACS", "Featured Antibodies"],
+  //   "Neurodegenerative Diseases Research": ["Neural Research Targets", "Neural Research Solutions", "Neurotrophins and Receptors"],
+  //   "Cytokines and Growth Factors": ["Cytokine Comprehensive Solutions", "Organoid Research", "GMP-grade", "Featured Cytokines"],
+  //   "Signaling Research": ["Ubiquitin", "Product Highlights", "Enzymes", "Kinases"],
+  //   "Immune Checkpoints": ["Featured Targets"],
+  //   "ADC therapy": ["ADC Comprehensive Solutions"],
+  //   "Lab Consumables": ["N.A."],
+  //   "Miscellaneous": ["N.A."],
+  //   "eBooks and Whitepapers": ["N.A."],
+  //   "Sino New Product Release": ["2024", "2023"],
+  //   "SCB New Product Release": ["2024"],
+  // };
 
   // Sort alphabetically
   const sortedCategories = Object.keys(categories).sort();

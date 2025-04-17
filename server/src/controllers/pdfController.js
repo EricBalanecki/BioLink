@@ -2,6 +2,10 @@ const { pool } = require("../connect");
 const path = require("path");
 const fs = require("fs");
 
+/* 
+Handles the functions for pdf imports and deletions
+*/
+
 // Fetch all PDFs
 exports.getAllPDFs = async (req, res) => {
     try {

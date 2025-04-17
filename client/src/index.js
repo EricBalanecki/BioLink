@@ -7,10 +7,11 @@ import {BrowserRouter} from 'react-router-dom';
 import { AuthProvider } from "./context/AuthContext"; // Wrap with AuthProvider
 import Header from './components/Header'
 
+// route layout page, app and header are wrapped within auth context with updates based off user login status
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-      <AuthProvider> {/* ✅ AuthProvider wraps the entire app */}
+      <AuthProvider> {/* AuthProvider wraps the entire app */}
         <BrowserRouter> 
             <Header/>
             <App />

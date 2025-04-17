@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
+// Handle when pdf linked is clicked by api call to backend and redirecting to pdf page
 const Link = () => {
     const { category, subcategory, index, id } = useParams();
     const navigate = useNavigate();

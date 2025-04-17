@@ -20,16 +20,6 @@ const buildPath = path.join(__dirname, '../build');
 app.use(express.static(buildPath));
 app.use('/public', express.static(path.join(__dirname, '../public')));
 
-// Import routes
-const productRoutes = require("./routes/product");
-const categoryRoutes = require("./routes/category");
-const orderRoutes = require("./routes/order");
-
-// Use routes
-app.use("/product", productRoutes);
-app.use("/category", categoryRoutes);
-app.use("/orders", orderRoutes);
-
 
 
 // Middleware
@@ -38,6 +28,12 @@ app.use(express.urlencoded({ extended: true })); // Parses URL-encoded bodies
 app.use(express.json()); // Parses JSON bodies
 app.use(fileUpload({ createParentPath: true })); // Enables file upload
 app.use(express.static(path.join(__dirname, "public"))); // Serves static files
+
+
+// Importroutes and use them after middleware has been executed
+
+const categoryRoutes = require("./routes/category");
+app.use("/category", categoryRoutes);
 
 const pdfRoutes = require("./routes/pdfRoutes"); // Import PDF routes
 app.use("/api/pdfs", pdfRoutes); // Mount PDF routes

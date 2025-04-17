@@ -6,6 +6,7 @@ import background1 from '../assets/images/landingPage/CatalogProducts.jpg'
 import background2 from '../assets/images/landingPage/CROservices.jpg'
 import background3 from '../assets/images/landingPage/eBooksWhitepapers.jpeg'
 
+// Displays landing page menu options
 const HomeLinks = () => {
     const navigate = useNavigate()
     const gotToNewPage = (link) => {
@@ -18,9 +19,12 @@ const HomeLinks = () => {
     }
     return (
             <div className='container home-container path-container'> 
-              <h1 style={{ textAlign: 'center', marginBottom: '1.5rem', color: '#333' }}>
-                BioLink
+              <h1 style={{ textAlign: 'center', marginBottom: '1.5rem', color: '#208871' }}>
+                BioLink App
               </h1>
+              <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', color: '#208871', fontWeight: 'normal' }}>
+                by Sino Biological
+              </h2>
                 <div className='grid col-12 '>
                   <Box component="section"
                        color={"white"}

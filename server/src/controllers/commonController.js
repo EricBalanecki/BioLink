@@ -7,13 +7,6 @@ const fs = require('fs').promises; // Use the promises API of fs
 const baseFolder = path.resolve(__dirname, '../../../node-mysql/public/pdfs'); // Adjust the path as needed
 const subdirectories = ['Miscellaneous', 'Neurology', 'Oncology'];
 
-const getCountries = tryCatchWrapper(async function (req, res, next) {
-    let sql = "SELECT ID as id, NAME, CONTINENT, ISO2 FROM COUNTRIES WHERE COUNTRIES.FLAG = 1"
-    res.setHeader('Content-Type', 'application/json')
-    const [rows] = await pool.query(sql);
-    return res.status(200).json( {data: rows} );
-});
-
 const getSubcats = tryCatchWrapper(async (req, res, next) => {
     try {
         const category = req.query.category;

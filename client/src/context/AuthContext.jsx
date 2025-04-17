@@ -6,7 +6,7 @@ export const AuthContext = createContext({
     logout: () => {},
 });
 
-
+// Auth context provides user login info from local storage
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
 

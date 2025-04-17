@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext'; // Import AuthContext
-
+import { AuthProvider } from './context/AuthContext'; 
 import Home from './pages/Home';
 import BrochureDetails from './pages/BrochureDetails';
 import BrochureLists from './pages/BrochureLists';
@@ -10,6 +9,7 @@ import Categories from './pages/Categories';
 import Import from './pages/Import';
 import Link from './pages/Link';
 import Login from './pages/Login';
+
 
 function App() {
     return (

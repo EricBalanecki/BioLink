@@ -4,6 +4,7 @@ import CryptoJS from 'crypto-js';
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
+// Component for sharing individual pdf
 const ShareComponent = ({ onClose, item }) => {
     const [recipient, setRecipient] = useState('');
     const [message, setMessage] = useState(null);
@@ -25,7 +26,7 @@ const ShareComponent = ({ onClose, item }) => {
         setLoading(true);
 
         try {
-            console.log("🚀 Sending email with:", { to: recipient, item: item });
+            console.log("Sending email with:", { to: recipient, item: item });
 
             const response = await fetch('/common/email', {
                 method: 'POST',
@@ -68,7 +69,7 @@ const ShareComponent = ({ onClose, item }) => {
                     textAlign: 'center',
                 }}
             >
-                <h2>Share Selected PDFs</h2>
+                <h2>Share Selected PDF</h2>
                 <input
                     type="email"
                     placeholder="Recipient's Email"

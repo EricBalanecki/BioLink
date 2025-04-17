@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Box, Button, TextField, Typography, Paper } from "@mui/material";
 import { AuthContext } from "../context/AuthContext";
 
+// displays login page, and handles backend api calls to user login
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

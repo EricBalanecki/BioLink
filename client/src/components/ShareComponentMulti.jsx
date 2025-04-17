@@ -4,6 +4,7 @@ import CryptoJS from 'crypto-js';
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
+// component for sharing multiple pdfs
 const ShareComponentMulti = ({ onClose, selectedItems }) => {
     const [recipient, setRecipient] = useState('');
     const [message, setMessage] = useState(null);
@@ -25,7 +26,7 @@ const ShareComponentMulti = ({ onClose, selectedItems }) => {
         setLoading(true);
 
         try {
-            console.log("🚀 Sending email with:", { to: recipient, items: selectedItems });
+            console.log("Sending email with:", { to: recipient, items: selectedItems });
 
             const response = await fetch('/common/email', {
                 method: 'POST',

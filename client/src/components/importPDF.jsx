@@ -16,45 +16,20 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import "./ImportPDF.css";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { categories } from "../constants/CategoryConstants"
 
+// Page for importing brochrues to database 
 const ImportPDF = () => {
     const navigate = useNavigate();
-
-    // static categories
-    const categories = {
-        "Infectious Disease Research": ["Influenza", "RSV", "Mpox", "Viral Research Comprehensive Solutions", "SARS-CoV-2"],
-        "CRO Services": ["Protein Production and Development", "Service Highlights", "Compound Screening and Profiling", "Enzyme and Assay Development", "Antibody Production and Development"],
-        "Emerging Therapeutic Targets": ["Oncology Research", "Immune Checkpoints", "Drug Target Research Solutions", "Featured Targets", "Biomarkers"],
-        "Cell Therapy": ["CAR-NK", "CAR-T", "GMP-grade", "Featured Targets"],
-        "Stem Cell Research": ["Biomarkers", "Stem Cell Research Solutions", "Organoid Research", "iPSC"],
-        "Antibodies": ["IHC", "Tag Antibodies", "Antibodies Comprehensive Solutions", "FACS", "Featured Antibodies"],
-        "Neurodegenerative Diseases Research": ["Neural Research Targets", "Neural Research Solutions", "Neurotrophins and Receptors"],
-        "Cytokines and Growth Factors": ["Cytokine Comprehensive Solutions", "Organoid Research", "GMP-grade", "Featured Cytokines"],
-        "Signaling Research": ["Ubiquitin", "Product Highlights", "Enzymes", "Kinases"],
-        "Immune Checkpoints": ["Featured Targets"],
-        "ADC therapy": ["ADC Comprehensive Solutions"],
-        "Lab Consumables": ["N.A."],
-        "Miscellaneous": ["N.A."],
-        "eBooks and Whitepapers": ["N.A."],
-        "Sino New Product Release": ["2024", "2023"],
-        "SCB New Product Release": ["2024"]
-    };
     
     const { user } = useContext(AuthContext);
-
-
-    // useEffect(() => {
-    //     if (!user) {
-    //         navigate("/login"); // Redirect to login if not authenticated
-    //     }
-    // }, [user, navigate]);
-    
     const [category, setCategory] = useState("");
     const [subcategory, setSubcategory] = useState("");
     const [pdfName, setPdfName] = useState("");
     const [file, setFile] = useState(null);
     const [brochures, setBrochures] = useState([]);
 
+    // fetch the current brochures in the given cat and subcat
     useEffect(() => {
         if (category && subcategory) {
             fetch(`/common/pdfs?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}`)
@@ -64,6 +39,7 @@ const ImportPDF = () => {
         }
     }, [category, subcategory]);
 
+    // update pdf when uploaded
     const handleFileChange = (event) => {
         const uploadedFile = event.target.files[0];
         if (uploadedFile) {
@@ -72,6 +48,7 @@ const ImportPDF = () => {
         }
     };
 
+    // api call to backend when file info is submitted
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (!category || !subcategory || !pdfName || !file) {
@@ -100,6 +77,7 @@ const ImportPDF = () => {
         }
     };
 
+    // api call to backend when brochure is deleted
     const handleDelete = async (pdfName) => {
         const isConfirmed = window.confirm(`Are you sure you want to delete the PDF: ${pdfName}?`);
     
@@ -132,7 +110,8 @@ const ImportPDF = () => {
     };
     
     
-
+    // If user is logged in and has import permissions, displays import ui, otherwise displays "Unauthorized Access"
+    // if user is not logged in, redirects to login page
     return (user &&  user.import === 1) ? (
         <div className="import-pdf-container">
             <Typography className="import-pdf-title">Import PDF</Typography>
@@ -164,13 +143,6 @@ const ImportPDF = () => {
                     </Select>
                 </FormControl>
             )}
-            <TextField
-                fullWidth
-                margin="normal"
-                label="PDF Name"
-                value={pdfName}
-                onChange={(e) => setPdfName(e.target.value)}
-            />
             <div className="import-pdf-dropzone" onDragOver={(e) => e.preventDefault()} onDrop={(e) => {
                 e.preventDefault();
                 handleFileChange({ target: { files: e.dataTransfer.files } });
@@ -181,6 +153,13 @@ const ImportPDF = () => {
                     {file ? file.name : "Drag & Drop or Click to Upload PDF"}
                 </Typography>
             </div>
+            <TextField
+                fullWidth
+                margin="normal"
+                label="PDF Name"
+                value={pdfName}
+                onChange={(e) => setPdfName(e.target.value)}
+            />
             <Button className="import-pdf-button" onClick={handleSubmit} disabled={!user || !user.email.includes("@sinobiological")}>Import PDF</Button>
             {brochures.length > 0 && (
                 <CardContent className="brochure-list">
