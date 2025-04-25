@@ -21,9 +21,12 @@ const downloadPDF = tryCatchWrapper(async (req, res, next) => {
         res.download(filePath, brochureName, (err) => {
             if (err) {
                 console.error("Error downloading file:", err);
-                res.status(500).json({ error: "Error downloading file." });
+                if (!res.headersSent) {
+                    res.status(500).json({ error: "Error downloading file." });
+                }
             }
         });
+        
         
     } catch (err) {
         next(err); // Pass any errors to the next middleware
